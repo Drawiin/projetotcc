@@ -1,0 +1,44 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+% Font configuration (Arial or Verdana)
+\usepackage{fontspec}
+\usepackage{iftex}
+\usepackage{ifthen}
+
+\newcommand{\setmainfontfallback}{%
+  \IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{Verdana}}%
+}
+\setmainfontfallback
+
+% Page layout
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+
+% Line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Header with page number (top right), starting from page 2
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+% Página 1 sem numeração visível
+\thispagestyle{empty}
+
+\section*{Fichamento do Texto}
+
+Insira aqui o conteúdo do seu fichamento ou do texto que será utilizado no Projeto de Pesquisa.
+
+\newpage
+
+% A partir da página 2, mostrar numeração no canto superior direito
+\pagestyle{fancy}
+
+\section*{Conteúdo}
+
+Continue o texto aqui.
+
+\end{document}
